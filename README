@@ -1,0 +1,69 @@
+# CO2 Calculator
+
+A web application to calculate and track your carbon footprint. Built with **HTML**, **CSS**, **Vanilla JavaScript** on the frontend, and **Node.js (Express)** with **MongoDB** on the backend.
+
+## Features
+
+- User-friendly interface to input daily activities
+- Calculates estimated CO2 emissions based on user input
+- Stores user data and calculation history in MongoDB
+- RESTful API built with Express.js
+- Responsive design for desktop and mobile
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+
+### Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/co2-calculator.git
+    cd co2-calculator
+    ```
+
+2. Install server dependencies:
+    ```sh
+    cd server
+    npm install
+    ```
+
+3. Start MongoDB (if not running already).
+
+4. Start the backend server:
+    ```sh
+    npm start
+    ```
+
+5. Open a new terminal and start the frontend (if using a local server or just open `client/index.html` in your browser):
+    ```sh
+    cd ../client
+    # If using a static server, e.g.:
+    npx serve .
+    ```
+
+6. Visit [http://localhost:3000](http://localhost:3000) (or the port your server runs on).
+
+## Project Structure
+
+## API Endpoints
+
+- `POST /api/calculate` - Calculate CO2 emissions
+- `GET /api/history` - Get user's calculation history
+
+## License
+
+MIT
+
+---
+
+*Made with ❤️ for a greener planet!*

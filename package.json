@@ -1,0 +1,12 @@
+{
+  "name": "co2_calc",
+  "version": "1.0.0",
+  "description": "A web application to calculate and track your carbon footprint. Built with **HTML**, **CSS**, **Vanilla JavaScript** on the frontend, and **Node.js (Express)** with **MongoDB** on the backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
