@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>About | CO2 Calculator</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-image"></div>
     <nav class="navbar">
         <div class="nav-logo">
             <span class="logo-circle">CO<sub>2</sub></span>
@@ -15,12 +17,35 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
             <li><a href="features.html">Features</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up / Log In</a></li>
         </ul>
     </nav>
     <main>
-        <h1>About</h1>
-        <p>This is the About page for the CO2 Calculator project.</p>
+        <section class="info-section" style="max-width: 700px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 16px rgba(44,62,80,0.08);
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+">
+            <h1 style="color:#2e8b57; font-size:2.2rem; margin-bottom:1.2rem;">About CO<sub>2</sub> Calculator</h1>
+            <p style="font-size:1.15rem; color:#256d46; margin-bottom:1.2rem;">
+                <strong>CO<sub>2</sub> Calculator</strong> is your personal tool for understanding, tracking, and reducing your carbon footprint. Our mission is to empower individuals to make more sustainable choices by providing clear, actionable insights into how everyday activities impact the environment.
+            </p>
+            <p style="font-size:1.08rem; color:#333; margin-bottom:1.2rem;">
+                Whether you're commuting, using electricity, or planning your meals, CO<sub>2</sub> Calculator helps you see the bigger picture. With real-time calculations, progress tracking, and personalized tips, we make it easy for everyone to take meaningful steps toward a greener future.
+            </p>
+            <p style="font-size:1.08rem; color:#333;">
+                Join our community of eco-conscious users and start your journey to a more sustainable lifestyle today. Every small action counts—together, we can make a real difference for our planet.
+            </p>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2025 CO2 Calculator. Made with <span aria-label="love">❤️</span> for a greener planet.</p>
+    </footer>
 </body>
 </html>

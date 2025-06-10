@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CO2 Calculator | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-circle">CO<sub>2</sub></span>
+            <span class="logo-text">Calculator</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="info-section" style="max-width: 500px; margin: 3rem auto 2rem auto; background: rgba(255,255,255,0.96); border-radius: 1.5rem; box-shadow: 0 2px 16px rgba(44,62,80,0.08); padding: 2.5rem 2rem;">
+            <h1 style="color:#2e8b57; font-size:2rem; margin-bottom:1.2rem;">Log Your Daily Activities</h1>
+            <form id="co2-input-form">
+                <div class="form-group">
+                    <label for="transport">Transport (km):</label>
+                    <input type="number" id="transport" name="transport" min="0" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="electricity">Electricity (kWh):</label>
+                    <input type="number" id="electricity" name="electricity" min="0" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="meat">Meat Meals:</label>
+                    <input type="number" id="meat" name="meat" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="flights">Flights (hours):</label>
+                    <input type="number" id="flights" name="flights" min="0" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="waste">Waste Produced (kg):</label>
+                    <input type="number" id="waste" name="waste" min="0" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="water">Water Usage (liters):</label>
+                    <input type="number" id="water" name="water" min="0" step="1" required>
+                </div>
+                <button type="submit" class="main-btn wide">Visualize My Impact</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CO2 Calculator. Made with <span aria-label="love">❤️</span> for a greener planet.</p>
+    </footer>
+    <script>
+        document.getElementById('co2-input-form').onsubmit = function(e) {
+            e.preventDefault();
+            // Save answers to localStorage (replace with backend in production)
+            const data = {
+                transport: parseFloat(document.getElementById('transport').value) || 0,
+                electricity: parseFloat(document.getElementById('electricity').value) || 0,
+                meat: parseFloat(document.getElementById('meat').value) || 0,
+                flights: parseFloat(document.getElementById('flights').value) || 0,
+                waste: parseFloat(document.getElementById('waste').value) || 0,
+                water: parseFloat(document.getElementById('water').value) || 0
+            };
+            localStorage.setItem('co2data', JSON.stringify(data));
+            window.location.href = "dashboard.html";
+        };
+    </script>
+</body>
+</html>
